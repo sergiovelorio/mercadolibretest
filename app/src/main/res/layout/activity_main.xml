@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff159"
+
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/logo"
+            android:layout_margin="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+            <EditText
+                android:id="@+id/query"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:hint="Buscar productos..."
+                android:background="#FFF"
+                android:padding="5dp"
+                android:textColor="#666"
+                android:textCursorDrawable="@null"
+                android:layout_height="wrap_content" />
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:src="@drawable/search"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:tint="#666"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noresults"
+            android:visibility="gone"
+            android:paddingTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            android:gravity="center_horizontal"
+            android:text="No se encontraron resultados"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            android:paddingTop="10dp">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
